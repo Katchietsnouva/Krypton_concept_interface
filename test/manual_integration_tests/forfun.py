@@ -24,7 +24,8 @@ convert_button = ttk.Button(master=input_frame)
 combo1.pack(side= 'left', padx=10)
 entry1.pack(side= 'left',padx=10)
 convert_button.pack(side= 'left')
-input_frame.pack()
+input_frame.pack(pady=10)
 
+output_label = ttk.Label(master=window, text= 'Output', font='Calibri 22')
 
 window.mainloop()

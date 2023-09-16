@@ -1,6 +1,3 @@
-# Changelog
-All notable changes to this project will be documented in this file!
-
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
@@ -10,20 +7,9 @@ ToDo:
  - set icon (self.call("wm", "iconphoto", self._w, tkinter.PhotoImage(file="test_images/CustomTkinter_logo_single.png")))
  - add option to change label position for checkbox, switch, radiobutton #628
 
-
-## [5.2.0] - 2022-05-02
 ### Added
  - Mostly bug fixes
-
-## [5.1.0] - 2022-05-02
-### Added
  - Added CTkScrollableFrame
-
-### Changed
- - Changed license to MIT
-
-## [5.0.0] - 2022-11-13
-### Added
  - Added CTkTextbox with automatic x and y scrollbars, corner_radius, border_width, border_spacing
  - Added CTkSegmentedButton
  - Added CTkTabview
@@ -52,39 +38,19 @@ ToDo:
  - Removed Settings class and moved settings to widget and window classes
  - removed customtkinter.set_spacing_scaling(), now set_widget_scaling() is used for spacing too
 
-## [4.6.0] - 2022-09-17
-### Added
- - CTkProgressBar indeterminate mode, automatic progress loop with .start() and .stop()
-
-## [4.5.0] - 2022-06-23
-### Added
- - CTkScrollbar (vertical, horizontal)
-
-## [4.4.0] - 2022-06-14
 ### Changed
  - Changed custom dropdown menu to normal tkinter.Menu because of multiple platform specific bugs
 
-## [4.3.0] - 2022-06-1
-### Added
+### Added 
+- CTkProgressBar indeterminate mode, automatic progress loop with .start() and .stop()
+ - CTkScrollbar (vertical, horizontal)
  - Added CTkComboBox
  - Small fixes for new dropdown menu
-
-## [4.2.0] - 2022-05-30
-### Added
  - CTkOptionMenu with custom dropdown menu
  - Support for clicking on labels of CTkCheckBox, CTkRadioButton, CTkSwitch
-
-## [4.1.0] - 2022-05-24
-### Added
  - Configure width and height for frame, button, label, progressbar, slider, entry
-
-## [4.0.0] - 2022-05-22
-### Added
  - This changelog file
  - Adopted semantic versioning
  - Added HighDPI scaling to all widgets and geometry managers (place, pack, grid)
  - Restructured CTkSettings and renamed a few manager classes
  - Orientation attribute for slider and progressbar
-
-### Removed
- - A few unnecessary tests

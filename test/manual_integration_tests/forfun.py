@@ -9,8 +9,8 @@
 import tkinter as tk
 from tkinter import ttk
 
-window = ttk.Window(themename='dark')
 window = tk.Tk()
+ttk.Style().theme_use('alt')
 window.geometry('300x400')
 window.title('Nouva Music')
 title_label = ttk.Label(master=window, font='Calibri', text='Input' )

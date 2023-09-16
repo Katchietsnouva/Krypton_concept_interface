@@ -11,8 +11,20 @@ from tkinter import ttk
 
 window = tk.Tk()
 ttk.Style().theme_use('alt')
-window.geometry('300x400')
+window.geometry('500x700')
 window.title('Nouva Music')
-title_label = ttk.Label(master=window, font='Calibri', text='Input' )
+title_label = ttk.Label(master=window, font='Calibri 24 bold', text='Input' )
 title_label.pack()
+
+input_frame = ttk.Frame(master=window)
+combo1 = ttk.Combobox(master=input_frame)
+entry1 = ttk.Entry(master=input_frame)
+convert_button = ttk.Button(master=input_frame)
+
+combo1.pack(side= 'left', padx=10)
+entry1.pack(side= 'left',padx=10)
+convert_button.pack(side= 'left')
+input_frame.pack()
+
+
 window.mainloop()

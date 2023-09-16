@@ -1,9 +1,13 @@
-import tkinter as tk
+# import tkinter as tk
+# screen = tk.Tk()
+# screen.geometry('300x400')
+# screen.title('Nouva Music')
+# screen.mainloop()
 
-screen = tk.Tk()
+import customtkinter as ctk
 
-screen.geometry('300x400')
-screen.title('Nouva Music')
-
-
+ctk.set_default_color_theme('dark-blue')
+screen = ctk.CTk()
+screen.geometry('350x450')
+screen.title('Nouvagen')
 screen.mainloop()

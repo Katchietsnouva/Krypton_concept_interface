@@ -5,7 +5,7 @@ import customtkinter
 customtkinter.set_appearance_mode("dark")
 
 app = customtkinter.CTk()
-app.title('Test OptionMenu ComboBox.py')
+app.title('Krypton Concept Interface')
 app.geometry('400x800')
 
 

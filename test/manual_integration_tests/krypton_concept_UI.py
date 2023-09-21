@@ -8,7 +8,7 @@ customtkinter.set_default_color_theme("blue")
 # Create the main application window
 app = customtkinter.CTk()
 app.title('Krypton Concept Interface')
-app.geometry('900x700')
+app.geometry('1000x700')
 
 # Define your functions
 def select_callback(choice):
@@ -49,21 +49,27 @@ right_hemisphere = customtkinter.CTkFrame(master=combined_hemispheres)
 header_group = customtkinter.CTkFrame(master=left_hemisphere)
 switch_group = customtkinter.CTkFrame(master=header_group)
 switch_group1 = customtkinter.CTkFrame(master=switch_group)
-switch_1 = customtkinter.CTkSwitch(master=switch_group1, text="switch_1", command=widget_click)
-switch_2 = customtkinter.CTkSwitch(master=switch_group1, text="switch_1", command=widget_click)
+switch_1 = customtkinter.CTkSwitch(master=switch_group1, text="Dark Mode", command=widget_click)
+switch_2 = customtkinter.CTkSwitch(master=switch_group1, text="Airplane Mode", command=widget_click)
 
-switch_1.pack(padx=20, pady=(0))
-switch_2.pack(padx=20, pady=(0))
+# switch_1.pack(padx=20, pady=(0))
+# switch_2.pack(padx=20, pady=(0))
+switch_1.grid(row=0, column=0, padx=10, pady=10, sticky="w")
+switch_2.grid(row=1, column=0, padx=10, pady=10, sticky="w")
+
 
 switch_group2 = customtkinter.CTkFrame(master=switch_group)
 switch_3 = customtkinter.CTkSwitch(master=switch_group2, text="switch_1", command=widget_click)
 switch_4 = customtkinter.CTkSwitch(master=switch_group2, text="switch_1", command=widget_click)
 
-switch_3.pack(padx=20, pady=(0))
-switch_4.pack(padx=20, pady=(0))
+# switch_3.pack(padx=20, pady=(0))
+# switch_4.pack(padx=20, pady=(0))
+switch_3.grid(row=0, column=0, padx=10, pady=10, sticky="w")
+switch_4.grid(row=1, column=0, padx=10, pady=10, sticky="w")
 
-switch_group1.pack(side='left', pady=0)
-switch_group2.pack(side='left', pady=0)
+switch_group1.pack(side='left', padx=5, pady=0)
+switch_group2.pack(side='left', padx=5, pady=0)
+
 
 # EXIT BUTTON
 button_exit = customtkinter.CTkButton(master=switch_group, text="Exit", command=exit_application)

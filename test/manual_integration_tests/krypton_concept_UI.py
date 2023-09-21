@@ -8,7 +8,7 @@ customtkinter.set_default_color_theme("blue")
 # Create the main application window
 app = customtkinter.CTk()
 app.title('Krypton Concept Interface')
-app.geometry('400x800')
+app.geometry('600x800')
 
 # Define your functions
 def select_callback(choice):
@@ -70,14 +70,19 @@ countries = ['Bahamas', 'Canada', 'Cuba', 'United States', "long sdhfhjgdshjafgh
 variable = tkinter.StringVar()
 variable.set("test")
 
-option_and_scroll_view = ttk.Frame(master=app)
+# option_and_scroll_view = ttk.Frame(master=app)
+option_and_scroll_view = customtkinter.CTkFrame(master=app)
 options_frame = ttk.Frame(master=option_and_scroll_view)
 
 optionmenu_1 = customtkinter.CTkOptionMenu(master=options_frame, variable=variable, values=countries, command=select_callback)
-optionmenu_2 = customtkinter.CTkOptionMenu(master=options_frame, variable=variable, values=countries, command=select_callback, dynamic_resizing=False)
-optionmenu_1.pack(side='left', pady=20, padx=10)
-optionmenu_2.pack(side='left', pady=20, padx=10)
-options_frame.pack(side='left')
+optionmenu_2 = customtkinter.CTkOptionMenu(master=options_frame, variable=variable, values=countries, command=select_callback)
+optionmenu_3 = customtkinter.CTkOptionMenu(master=options_frame, variable=variable, values=countries, command=select_callback)
+optionmenu_4 = customtkinter.CTkOptionMenu(master=options_frame, variable=variable, values=countries, command=select_callback, dynamic_resizing=False)
+optionmenu_1.pack(pady=2, padx=10)
+optionmenu_2.pack(pady=2, padx=10)
+optionmenu_3.pack(pady=2, padx=10)
+optionmenu_4.pack(pady=2, padx=10)
+options_frame.pack(side='left', pady=10, padx=10)
 
 # Create scrollable frame
 scrollable_frame = customtkinter.CTkScrollableFrame(master=option_and_scroll_view, label_text="CTkScrollableFrame")
@@ -86,12 +91,11 @@ scrollable_frame.grid_columnconfigure(0, weight=1)
 scrollable_frame_switches = []
 for i in range(100):
     switch = customtkinter.CTkSwitch(master=scrollable_frame, text=f"CTkSwitch {i}")
-    switch.grid(row=i, column=0, padx=10, pady=(0, 20))
+    switch.grid(row=i, column=0, padx=10, pady=(0, 10))
     scrollable_frame_switches.append(switch)
 
-option_and_scroll_view.pack(side="left")
-# scrollable_frame.pack(side=left) 
-
+# scrollable_frame.pack(side=left)  
+scrollable_frame.pack(side="left")
 option_and_scroll_view.pack()
 
 combobox_1 = customtkinter.CTkComboBox(app, variable=variable, values=countries, command=select_callback, width=300)

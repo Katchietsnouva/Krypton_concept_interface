@@ -110,7 +110,7 @@ scrollable_frame.pack(fill="both", expand=True)
 scrollable_frame.grid_columnconfigure(0, weight=1)
 scrollable_frame_switches = []
 for i in range(100):
-    switch = customtkinter.CTkSwitch(master=scrollable_frame, text=f"CTkSwitch {i}")
+    switch = customtkinter.CTkSwitch(master=scrollable_frame, text=f"KryptonOptions {i}")
     switch.grid(row=i, column=0, padx=10, pady=(0, 10))
     scrollable_frame_switches.append(switch)
 

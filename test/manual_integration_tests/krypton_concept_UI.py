@@ -112,13 +112,15 @@ combobox_1.pack(pady=20, padx=10)
 scaling_slider = customtkinter.CTkSlider(app, command=set_new_scaling, from_=0, to=2)
 scaling_slider.pack(pady=20, padx=10)
 
-openfile_frame = ttk.Frame(master=app)
-openfile_frame_sub1 = ttk.Frame(master=openfile_frame)
+
+# OPEN FILE AND SAVE FILE, FOLDER BUTTONS
+openfile_frame = customtkinter.CTkFrame(master=app)
+openfile_frame_sub1 = customtkinter.CTkFrame(master=openfile_frame)
 
 button_open_file = customtkinter.CTkButton(openfile_frame_sub1, text="Open File", command=open_file_dialog)
 button_open_directory = customtkinter.CTkButton(openfile_frame_sub1, text="Open Directory", command=open_directory_dialog)
 
-openfile_frame_sub2 = ttk.Frame(master=openfile_frame)
+openfile_frame_sub2 = customtkinter.CTkFrame(master=openfile_frame)
 
 button_save_as_file = customtkinter.CTkButton(openfile_frame_sub2, text="Save File As", command=save_as_file_dialog)
 button_save_as_file_name = customtkinter.CTkButton(openfile_frame_sub2, text="Save File Name As", command=save_as_file_name_dialog)
@@ -134,12 +136,12 @@ openfile_frame.pack()
 
 
 entry_3 = customtkinter.CTkEntry(app, placeholder_text="placeholder")
-entry_3.pack(pady=(40, 20))
+entry_3.pack(pady=(10, 10))
 entry_3.insert(0, "sdfjk")
 entry_3.delete(0, "end")
 
 entry_4 = customtkinter.CTkEntry(app, placeholder_text="password", show="*")
-entry_4.pack(pady=(20, 20))
+entry_4.pack(pady=(10, 10))
 entry_4.insert(0, "sdfjk")
 entry_4.delete(0, 2)
 

@@ -8,7 +8,7 @@ customtkinter.set_default_color_theme("blue")
 # Create the main application window
 app = customtkinter.CTk()
 app.title('Krypton Concept Interface')
-app.geometry('600x800')
+app.geometry('600x700')
 
 # Define your functions
 def select_callback(choice):
@@ -40,8 +40,7 @@ def save_as_file_name_dialog():
 def exit_application():
     app.quit()
 
-# Create widgets
-
+# CREATE HEADER GROUP
 header_group = customtkinter.CTkFrame(master=app)
 switch_group = customtkinter.CTkFrame(master=header_group)
 switch_group1 = customtkinter.CTkFrame(master=switch_group)
@@ -61,6 +60,7 @@ switch_4.pack(padx=20, pady=(0))
 switch_group1.pack(side='left', pady=0)
 switch_group2.pack(side='left', pady=0)
 
+# EXIT BUTTON
 button_exit = customtkinter.CTkButton(master=switch_group, text="Exit", command=exit_application)
 button_exit.pack(side= 'left', padx = 10, pady=10)  
 switch_group.pack()
@@ -70,6 +70,7 @@ countries = ['Bahamas', 'Canada', 'Cuba', 'United States', "long sdhfhjgdshjafgh
 variable = tkinter.StringVar()
 variable.set("test")
 
+# OPTION GROUP 1
 # option_and_scroll_view = ttk.Frame(master=app)
 option_and_scroll_view = customtkinter.CTkFrame(master=app)
 options_frame = ttk.Frame(master=option_and_scroll_view)
@@ -91,6 +92,7 @@ optionmenu_6.pack(pady=2, padx=10)
 optionmenu_7.pack(pady=2, padx=10)
 options_frame.pack(side='left', pady=10, padx=10)
 
+# OPTION GROUP 2
 # Create scrollable frame
 scrollable_frame = customtkinter.CTkScrollableFrame(master=option_and_scroll_view, label_text="CTkScrollableFrame")
 scrollable_frame.pack(fill="both", expand=True)
@@ -101,16 +103,16 @@ for i in range(100):
     switch.grid(row=i, column=0, padx=10, pady=(0, 10))
     scrollable_frame_switches.append(switch)
 
-# scrollable_frame.pack(side=left)  
 scrollable_frame.pack(side="left")
 option_and_scroll_view.pack()
 
+# COMBO BOX
 combobox_1 = customtkinter.CTkComboBox(app, variable=variable, values=countries, command=select_callback, width=300)
-combobox_1.pack(pady=20, padx=10)
+combobox_1.pack(pady=10, padx=10)
 
-
+# SCAL
 scaling_slider = customtkinter.CTkSlider(app, command=set_new_scaling, from_=0, to=2)
-scaling_slider.pack(pady=20, padx=10)
+scaling_slider.pack(pady=10, padx=10)
 
 
 # OPEN FILE AND SAVE FILE, FOLDER BUTTONS
@@ -134,17 +136,38 @@ openfile_frame_sub1.pack(side='left', pady=10, padx=10)
 openfile_frame_sub2.pack(side='left', pady=10, padx=10)
 openfile_frame.pack()
 
+# ENTRY BOXES
+entry_field = customtkinter.CTkFrame(master=app)
+entry_field_left = customtkinter.CTkFrame(master=entry_field)
+entry_field_right = customtkinter.CTkFrame(master=entry_field)
 
-entry_3 = customtkinter.CTkEntry(app, placeholder_text="placeholder")
+entry_1 = customtkinter.CTkEntry(master = entry_field_left, placeholder_text="placeholder")
+entry_1.pack(pady=(10, 10))
+entry_1.insert(0, "sdfjk")
+entry_1.delete(0, "end")
+
+entry_2 = customtkinter.CTkEntry(master = entry_field_left, placeholder_text="placeholder")
+entry_2.pack(pady=(10, 10))
+entry_2.insert(0, "sdfjk")
+entry_2.delete(0, "end")
+
+entry_1.pack()
+entry_2.pack()
+entry_field_left.pack(side='left')
+
+entry_3 = customtkinter.CTkEntry(master = entry_field_right, placeholder_text="placeholder")
 entry_3.pack(pady=(10, 10))
 entry_3.insert(0, "sdfjk")
 entry_3.delete(0, "end")
 
-entry_4 = customtkinter.CTkEntry(app, placeholder_text="password", show="*")
+entry_4 = customtkinter.CTkEntry(master = entry_field_right, placeholder_text="password", show="*")
 entry_4.pack(pady=(10, 10))
 entry_4.insert(0, "sdfjk")
 entry_4.delete(0, 2)
 
+entry_3.pack()
+entry_4.pack()
+entry_field_right.pack(side='left')
 
 # Start the main loop
 app.mainloop()

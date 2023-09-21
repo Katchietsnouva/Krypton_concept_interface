@@ -40,6 +40,9 @@ def save_as_file_name_dialog():
 def exit_application():
     app.quit()
 
+def enter():
+    pass
+
 # STRUCTURE
 combined_hemispheres = customtkinter.CTkFrame(master=app)
 left_hemisphere = customtkinter.CTkFrame(master=combined_hemispheres)
@@ -127,9 +130,21 @@ combobox_1.pack(pady=10, padx=10)
 combobox_2 = customtkinter.CTkComboBox(right_hemisphere, variable=variable, values=countries, command=select_callback, width=300)
 combobox_2.pack(pady=10, padx=10)
 
+# SLIDER AND ENTER BUTTON
+slider_and_enter = customtkinter.CTkFrame(master=right_hemisphere)
+slider_side_left = customtkinter.CTkFrame(master=slider_and_enter)
+enterbtn_side_right = customtkinter.CTkFrame(master=slider_and_enter)
+
 # SLIDER
-scaling_slider = customtkinter.CTkSlider(right_hemisphere, command=set_new_scaling, from_=0, to=2)
+scaling_slider = customtkinter.CTkSlider(master=slider_side_left, command=set_new_scaling, from_=0, to=2)
 scaling_slider.pack(pady=10, padx=10)
+slider_side_left.pack(side='left', padx=20, pady=10)
+
+# ENTER BUTTON
+button_enter = customtkinter.CTkButton(master=enterbtn_side_right, text="Enter", command=enter)
+button_enter.pack(side= 'left', padx = 10, pady=10)  
+enterbtn_side_right.pack(side='left',padx=20, pady=10)
+slider_and_enter.pack(padx=20, pady=10)
 
 # ENTRY BOXES
 entry_field = customtkinter.CTkFrame(master=right_hemisphere)

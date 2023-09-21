@@ -25,6 +25,7 @@ button_2.pack(padx=20, pady=(10, 20))
 
 switch_1 = customtkinter.CTkSwitch(master=app, text="switch_1", command=widget_click)
 switch_1.pack(padx=20, pady=(20, 10))
+
 button_2 = customtkinter.CTkButton(master=app, text="Disable/Enable switch_1", command=lambda: change_state(switch_1))
 button_2.pack(padx=20, pady=(10, 20))
 

@@ -154,7 +154,7 @@ entry_2.delete(0, "end")
 
 entry_1.pack()
 entry_2.pack()
-entry_field_left.pack(side='left')
+entry_field_left.pack(side='left', padx = 10)
 
 entry_3 = customtkinter.CTkEntry(master = entry_field_right, placeholder_text="placeholder")
 entry_3.pack(pady=(10, 10))
@@ -168,7 +168,8 @@ entry_4.delete(0, 2)
 
 entry_3.pack()
 entry_4.pack()
-entry_field_right.pack(side='left')
+entry_field_right.pack(side='left', padx = 10)
+entry_field.pack()
 
 # Start the main loop
 app.mainloop()

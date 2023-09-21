@@ -78,7 +78,7 @@ optionmenu_1 = customtkinter.CTkOptionMenu(master=options_frame, variable=variab
 optionmenu_2 = customtkinter.CTkOptionMenu(master=options_frame, variable=variable, values=countries, command=select_callback)
 optionmenu_3 = customtkinter.CTkOptionMenu(master=options_frame, variable=variable, values=countries, command=select_callback)
 optionmenu_4 = customtkinter.CTkOptionMenu(master=options_frame, variable=variable, values=countries, command=select_callback)
-optionmenu_4 = customtkinter.CTkOptionMenu(master=options_frame, variable=variable, values=countries, command=select_callback, dynamic_resizing=False)
+optionmenu_5 = customtkinter.CTkOptionMenu(master=options_frame, variable=variable, values=countries, command=select_callback, dynamic_resizing=False)
 
 optionmenu_1.pack(pady=2, padx=10)
 optionmenu_2.pack(pady=2, padx=10)

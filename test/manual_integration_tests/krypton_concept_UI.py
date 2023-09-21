@@ -58,12 +58,12 @@ switch_4 = customtkinter.CTkSwitch(master=switch_group2, text="switch_1", comman
 
 switch_3.pack(padx=20, pady=(0))
 switch_4.pack(padx=20, pady=(0))
-switch_group2.pack(side= 'left')
+switch_group2.pack(side= 'left',pady=10)  
 switch_group.pack()
 
 
 button_exit = customtkinter.CTkButton(header_group, text="Exit", command=exit_application)
-button_exit.pack(pady=10)  
+button_exit.pack(side= 'left', pady=10)  
 header_group.pack()
 
 countries = ['Bahamas', 'Canada', 'Cuba', 'United States', "long sdhfhjgdshjafghdgshfhjdsfj"]

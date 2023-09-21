@@ -67,18 +67,15 @@ def save_as_file_name_dialog():
     print(customtkinter.filedialog.asksaveasfilename())
 
 button_open_file = customtkinter.CTkButton(app, text="Open File Dialog", command=open_file_dialog)
-button_open_file.pack(pady=10)
-
 button_open_directory = customtkinter.CTkButton(app, text="Open Directory Dialog", command=open_directory_dialog)
-button_open_directory.pack(pady=10)
-
 button_save_as_file = customtkinter.CTkButton(app, text="Save As File Dialog", command=save_as_file_dialog)
-button_save_as_file.pack(pady=10)
-
 button_open_file_name = customtkinter.CTkButton(app, text="Open File Name Dialog", command=open_file_name_dialog)
-button_open_file_name.pack(pady=10)
-
 button_save_as_file_name = customtkinter.CTkButton(app, text="Save As File Name Dialog", command=save_as_file_name_dialog)
+
+button_open_file.pack(pady=10)
+button_open_directory.pack(pady=10)
+button_save_as_file.pack(pady=10)
+button_open_file_name.pack(pady=10)
 button_save_as_file_name.pack(pady=10)
 
 # ...

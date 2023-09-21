@@ -79,9 +79,8 @@ optionmenu_1.pack(side='left', pady=20, padx=10)
 optionmenu_2.pack(side='left', pady=20, padx=10)
 options_frame.pack(side='left')
 
-
 # Create scrollable frame
-scrollable_frame = customtkinter.CTkScrollableFrame(app, label_text="CTkScrollableFrame")
+scrollable_frame = customtkinter.CTkScrollableFrame(master=option_and_scroll_view, label_text="CTkScrollableFrame")
 scrollable_frame.pack(fill="both", expand=True)
 scrollable_frame.grid_columnconfigure(0, weight=1)
 scrollable_frame_switches = []
@@ -89,6 +88,11 @@ for i in range(100):
     switch = customtkinter.CTkSwitch(master=scrollable_frame, text=f"CTkSwitch {i}")
     switch.grid(row=i, column=0, padx=10, pady=(0, 20))
     scrollable_frame_switches.append(switch)
+
+option_and_scroll_view.pack(side="left")
+# scrollable_frame.pack(side=left) 
+
+option_and_scroll_view.pack()
 
 combobox_1 = customtkinter.CTkComboBox(app, variable=variable, values=countries, command=select_callback, width=300)
 combobox_1.pack(pady=20, padx=10)

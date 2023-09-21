@@ -116,27 +116,6 @@ combobox_2.pack(pady=10, padx=10)
 scaling_slider = customtkinter.CTkSlider(app, command=set_new_scaling, from_=0, to=2)
 scaling_slider.pack(pady=10, padx=10)
 
-# OPEN FILE AND SAVE FILE, FOLDER BUTTONS
-openfile_frame = customtkinter.CTkFrame(master=app)
-openfile_frame_sub1 = customtkinter.CTkFrame(master=openfile_frame)
-
-button_open_file = customtkinter.CTkButton(openfile_frame_sub1, text="Open File", command=open_file_dialog)
-button_open_directory = customtkinter.CTkButton(openfile_frame_sub1, text="Open Directory", command=open_directory_dialog)
-
-openfile_frame_sub2 = customtkinter.CTkFrame(master=openfile_frame)
-
-button_save_as_file = customtkinter.CTkButton(openfile_frame_sub2, text="Save File As", command=save_as_file_dialog)
-button_save_as_file_name = customtkinter.CTkButton(openfile_frame_sub2, text="Save File Name As", command=save_as_file_name_dialog)
-
-button_open_file.pack(pady=2, padx=10)
-button_open_directory.pack(pady=2, padx=10)
-
-button_save_as_file.pack(pady=2, padx=10)
-button_save_as_file_name.pack(pady=2, padx=10)
-openfile_frame_sub1.pack(side='left', pady=10, padx=10)
-openfile_frame_sub2.pack(side='left', pady=10, padx=10)
-openfile_frame.pack()
-
 # ENTRY BOXES
 entry_field = customtkinter.CTkFrame(master=app)
 entry_field_left = customtkinter.CTkFrame(master=entry_field)
@@ -170,6 +149,27 @@ entry_3.pack()
 entry_4.pack()
 entry_field_right.pack(side='left', padx = 10)
 entry_field.pack()
+
+# OPEN FILE AND SAVE FILE, FOLDER BUTTONS
+openfile_frame = customtkinter.CTkFrame(master=app)
+openfile_frame_sub1 = customtkinter.CTkFrame(master=openfile_frame)
+
+button_open_file = customtkinter.CTkButton(openfile_frame_sub1, text="Open File", command=open_file_dialog)
+button_open_directory = customtkinter.CTkButton(openfile_frame_sub1, text="Open Directory", command=open_directory_dialog)
+
+openfile_frame_sub2 = customtkinter.CTkFrame(master=openfile_frame)
+
+button_save_as_file = customtkinter.CTkButton(openfile_frame_sub2, text="Save File As", command=save_as_file_dialog)
+button_save_as_file_name = customtkinter.CTkButton(openfile_frame_sub2, text="Save File Name As", command=save_as_file_name_dialog)
+
+button_open_file.pack(pady=2, padx=10)
+button_open_directory.pack(pady=2, padx=10)
+
+button_save_as_file.pack(pady=2, padx=10)
+button_save_as_file_name.pack(pady=2, padx=10)
+openfile_frame_sub1.pack(side='left', pady=10, padx=10)
+openfile_frame_sub2.pack(side='left', pady=10, padx=10)
+openfile_frame.pack()
 
 # Start the main loop
 app.mainloop()

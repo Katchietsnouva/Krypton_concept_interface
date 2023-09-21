@@ -12,10 +12,12 @@ class App(customtkinter.CTk):
     def __init__(self):
         super().__init__()
 
+        self.title('Krypton Concept Interface')
+        self.geometry('400x800')
 
-        app = customtkinter.CTk()
-        app.title('Krypton Concept Interface')
-        app.geometry('400x800')
+        # app = customtkinter.CTk()
+        # app.title('Krypton Concept Interface')
+        # app.geometry('400x800')
 
 
         def select_callback(choice):

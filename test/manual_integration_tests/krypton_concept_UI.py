@@ -79,12 +79,16 @@ optionmenu_2 = customtkinter.CTkOptionMenu(master=options_frame, variable=variab
 optionmenu_3 = customtkinter.CTkOptionMenu(master=options_frame, variable=variable, values=countries, command=select_callback)
 optionmenu_4 = customtkinter.CTkOptionMenu(master=options_frame, variable=variable, values=countries, command=select_callback)
 optionmenu_5 = customtkinter.CTkOptionMenu(master=options_frame, variable=variable, values=countries, command=select_callback)
-optionmenu_6 = customtkinter.CTkOptionMenu(master=options_frame, variable=variable, values=countries, command=select_callback, dynamic_resizing=False)
+optionmenu_6 = customtkinter.CTkOptionMenu(master=options_frame, variable=variable, values=countries, command=select_callback)
+optionmenu_7 = customtkinter.CTkOptionMenu(master=options_frame, variable=variable, values=countries, command=select_callback, dynamic_resizing=False)
 
 optionmenu_1.pack(pady=2, padx=10)
 optionmenu_2.pack(pady=2, padx=10)
 optionmenu_3.pack(pady=2, padx=10)
 optionmenu_4.pack(pady=2, padx=10)
+optionmenu_5.pack(pady=2, padx=10)
+optionmenu_6.pack(pady=2, padx=10)
+optionmenu_7.pack(pady=2, padx=10)
 options_frame.pack(side='left', pady=10, padx=10)
 
 # Create scrollable frame

@@ -47,15 +47,15 @@ switch_group1 = ttk.Frame(master=switch_group)
 switch_1 = customtkinter.CTkSwitch(master=switch_group1, text="switch_1", command=widget_click)
 switch_2 = customtkinter.CTkSwitch(master=switch_group1, text="switch_1", command=widget_click)
 
-switch_1.pack(padx=20, pady=(60, 10))
-switch_2.pack(padx=20, pady=(20, 10))
+switch_1.pack(padx=20, pady=(10))
+switch_2.pack(padx=20, pady=(10))
 switch_group1.pack(side='left')
 
 switch_group2 = ttk.Frame(master=switch_group)
 switch_3 = customtkinter.CTkSwitch(master=switch_group2, text="switch_1", command=widget_click)
 switch_4 = customtkinter.CTkSwitch(master=switch_group2, text="switch_1", command=widget_click)
 
-switch_3.pack(padx=20, pady=(20, 10))
+switch_3.pack(padx=20, pady=(10))
 switch_4.pack(padx=20, pady=(20, 10))
 switch_group2.pack(side= 'left')
 switch_group.pack()

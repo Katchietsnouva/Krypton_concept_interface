@@ -79,13 +79,13 @@ button_save_as_file = customtkinter.CTkButton(openfile_frame_sub2, text="Save As
 
 button_save_as_file_name = customtkinter.CTkButton(openfile_frame_sub2, text="Save As File Name Dialog", command=save_as_file_name_dialog)
 
-button_open_file.pack(side='left', pady=10)
-button_open_directory.pack(side='left', pady=10)
-button_save_as_file.pack(side='left', pady=10)
-button_open_file_name.pack(side='left', pady=10)
-button_save_as_file_name.pack(side='left', pady=10)
-openfile_frame_sub1.pack()
-openfile_frame_sub2.pack()
+button_open_file.pack( pady=20, padx=10)
+button_open_directory.pack( pady=20, padx=10)
+button_save_as_file.pack( pady=20, padx=10)
+button_open_file_name.pack( pady=20, padx=10)
+button_save_as_file_name.pack( pady=20, padx=10)
+openfile_frame_sub1.pack(side='left', pady=20, padx=10)
+openfile_frame_sub2.pack(side='left', pady=20, padx=10)
 openfile_frame.pack()
 
 # ...

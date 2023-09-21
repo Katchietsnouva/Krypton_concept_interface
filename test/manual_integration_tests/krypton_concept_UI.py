@@ -70,16 +70,15 @@ countries = ['Bahamas', 'Canada', 'Cuba', 'United States', "long sdhfhjgdshjafgh
 variable = tkinter.StringVar()
 variable.set("test")
 
-options_frame = ttk.Frame(master=app)
+option_and_scroll_view = ttk.Frame(master=app)
+options_frame = ttk.Frame(master=option_and_scroll_view)
 
 optionmenu_1 = customtkinter.CTkOptionMenu(master=options_frame, variable=variable, values=countries, command=select_callback)
 optionmenu_2 = customtkinter.CTkOptionMenu(master=options_frame, variable=variable, values=countries, command=select_callback, dynamic_resizing=False)
 optionmenu_1.pack(side='left', pady=20, padx=10)
 optionmenu_2.pack(side='left', pady=20, padx=10)
-options_frame.pack()
+options_frame.pack(side='left')
 
-combobox_1 = customtkinter.CTkComboBox(app, variable=variable, values=countries, command=select_callback, width=300)
-combobox_1.pack(pady=20, padx=10)
 
 # Create scrollable frame
 scrollable_frame = customtkinter.CTkScrollableFrame(app, label_text="CTkScrollableFrame")
@@ -90,6 +89,10 @@ for i in range(100):
     switch = customtkinter.CTkSwitch(master=scrollable_frame, text=f"CTkSwitch {i}")
     switch.grid(row=i, column=0, padx=10, pady=(0, 20))
     scrollable_frame_switches.append(switch)
+
+combobox_1 = customtkinter.CTkComboBox(app, variable=variable, values=countries, command=select_callback, width=300)
+combobox_1.pack(pady=20, padx=10)
+
 
 scaling_slider = customtkinter.CTkSlider(app, command=set_new_scaling, from_=0, to=2)
 scaling_slider.pack(pady=20, padx=10)

@@ -67,18 +67,26 @@ def save_as_file_name_dialog():
     print(customtkinter.filedialog.asksaveasfilename())
 
 openfile_frame = ttk.Frame(master=app)
+openfile_frame_sub1 = ttk.Frame(master=openfile_frame)
 
-button_open_file = customtkinter.CTkButton(openfile_frame, text="Open File Dialog", command=open_file_dialog)
-button_open_directory = customtkinter.CTkButton(openfile_frame, text="Open Directory Dialog", command=open_directory_dialog)
-button_save_as_file = customtkinter.CTkButton(openfile_frame, text="Save As File Dialog", command=save_as_file_dialog)
-button_open_file_name = customtkinter.CTkButton(openfile_frame, text="Open File Name Dialog", command=open_file_name_dialog)
-button_save_as_file_name = customtkinter.CTkButton(openfile_frame, text="Save As File Name Dialog", command=save_as_file_name_dialog)
+button_open_file = customtkinter.CTkButton(openfile_frame_sub1, text="Open File Dialog", command=open_file_dialog)
+button_open_file_name = customtkinter.CTkButton(openfile_frame_sub1, text="Open File Name Dialog", command=open_file_name_dialog)
+button_open_directory = customtkinter.CTkButton(openfile_frame_sub1, text="Open Directory Dialog", command=open_directory_dialog)
+
+openfile_frame_sub2 = ttk.Frame(master=openfile_frame)
+
+button_save_as_file = customtkinter.CTkButton(openfile_frame_sub2, text="Save As File Dialog", command=save_as_file_dialog)
+
+button_save_as_file_name = customtkinter.CTkButton(openfile_frame_sub2, text="Save As File Name Dialog", command=save_as_file_name_dialog)
 
 button_open_file.pack(side='left', pady=10)
 button_open_directory.pack(side='left', pady=10)
 button_save_as_file.pack(side='left', pady=10)
 button_open_file_name.pack(side='left', pady=10)
 button_save_as_file_name.pack(side='left', pady=10)
+openfile_frame_sub1.pack()
+openfile_frame_sub2.pack()
+openfile_frame.pack()
 
 # ...
 

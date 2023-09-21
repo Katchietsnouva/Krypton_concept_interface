@@ -73,7 +73,7 @@ variable.set("test")
 # OPTION GROUP 1
 # option_and_scroll_view = ttk.Frame(master=app)
 option_and_scroll_view = customtkinter.CTkFrame(master=app)
-options_frame = ttk.Frame(master=option_and_scroll_view)
+options_frame = customtkinter.CTkFrame(master=option_and_scroll_view)
 
 optionmenu_1 = customtkinter.CTkOptionMenu(master=options_frame, variable=variable, values=countries, command=select_callback)
 optionmenu_2 = customtkinter.CTkOptionMenu(master=options_frame, variable=variable, values=countries, command=select_callback)
@@ -94,7 +94,7 @@ options_frame.pack(side='left', pady=10, padx=10)
 
 # OPTION GROUP 2
 # Create scrollable frame
-scrollable_frame = customtkinter.CTkScrollableFrame(master=option_and_scroll_view, label_text="CTkScrollableFrame")
+scrollable_frame = customtkinter.CTkScrollableFrame(master=option_and_scroll_view, label_text="Krypton Options")
 scrollable_frame.pack(fill="both", expand=True)
 scrollable_frame.grid_columnconfigure(0, weight=1)
 scrollable_frame_switches = []

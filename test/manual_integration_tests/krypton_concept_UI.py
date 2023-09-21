@@ -50,7 +50,6 @@ switch_2 = customtkinter.CTkSwitch(master=switch_group1, text="switch_1", comman
 
 switch_1.pack(padx=20, pady=(0))
 switch_2.pack(padx=20, pady=(0))
-switch_group1.pack(side='left')
 
 switch_group2 = ttk.Frame(master=switch_group)
 switch_3 = customtkinter.CTkSwitch(master=switch_group2, text="switch_1", command=widget_click)
@@ -58,13 +57,14 @@ switch_4 = customtkinter.CTkSwitch(master=switch_group2, text="switch_1", comman
 
 switch_3.pack(padx=20, pady=(0))
 switch_4.pack(padx=20, pady=(0))
-switch_group2.pack(side= 'left',pady=10)  
+
+switch_group1.pack(side='left', pady=0)
+switch_group2.pack(side='left', pady=0)
+
+button_exit = customtkinter.CTkButton(master=switch_group, text="Exit", command=exit_application)
+button_exit.pack(side= 'left', padx = 10, pady=10)  
 switch_group.pack()
-
-
-button_exit = customtkinter.CTkButton(header_group, text="Exit", command=exit_application)
-button_exit.pack(side= 'left', pady=10)  
-header_group.pack()
+header_group.pack(padx=20, pady=10)
 
 countries = ['Bahamas', 'Canada', 'Cuba', 'United States', "long sdhfhjgdshjafghdgshfhjdsfj"]
 variable = tkinter.StringVar()
@@ -97,7 +97,6 @@ button_save_as_file = customtkinter.CTkButton(openfile_frame_sub2, text="Save As
 button_save_as_file_name = customtkinter.CTkButton(openfile_frame_sub2, text="Save As File Name Dialog", command=save_as_file_name_dialog)
 
 button_open_file.pack(pady=10, padx=10)
-button_open_file_name.pack(pady=10, padx=10)
 button_open_directory.pack(pady=10, padx=10)
 
 button_save_as_file.pack(pady=10, padx=10)

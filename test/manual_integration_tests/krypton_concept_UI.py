@@ -43,8 +43,8 @@ def exit_application():
 # Create widgets
 
 header_group = customtkinter.CTkFrame(master=app)
-switch_group = ttk.Frame(master=header_group)
-switch_group1 = ttk.Frame(master=switch_group)
+switch_group = customtkinter.CTkFrame(master=header_group)
+switch_group1 = customtkinter.CTkFrame(master=switch_group)
 switch_1 = customtkinter.CTkSwitch(master=switch_group1, text="switch_1", command=widget_click)
 switch_2 = customtkinter.CTkSwitch(master=switch_group1, text="switch_1", command=widget_click)
 

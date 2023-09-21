@@ -42,7 +42,7 @@ def exit_application():
 
 # Create widgets
 
-header_group = ttk.Frame(master=app)
+header_group = customtkinter.CTkFrame(master=app)
 switch_group = ttk.Frame(master=header_group)
 switch_group1 = ttk.Frame(master=switch_group)
 switch_1 = customtkinter.CTkSwitch(master=switch_group1, text="switch_1", command=widget_click)
@@ -115,8 +115,8 @@ scaling_slider.pack(pady=20, padx=10)
 openfile_frame = ttk.Frame(master=app)
 openfile_frame_sub1 = ttk.Frame(master=openfile_frame)
 
-button_open_file = customtkinter.CTkButton(openfile_frame_sub1, text="Open File Dialog", command=open_file_dialog)
-button_open_directory = customtkinter.CTkButton(openfile_frame_sub1, text="Open Directory Dialog", command=open_directory_dialog)
+button_open_file = customtkinter.CTkButton(openfile_frame_sub1, text="Open File", command=open_file_dialog)
+button_open_directory = customtkinter.CTkButton(openfile_frame_sub1, text="Open Directory", command=open_directory_dialog)
 
 openfile_frame_sub2 = ttk.Frame(master=openfile_frame)
 

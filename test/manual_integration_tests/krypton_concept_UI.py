@@ -8,7 +8,6 @@ app = customtkinter.CTk()
 app.title('Krypton Concept Interface')
 app.geometry('400x800')
 
-
 def select_callback(choice):
     choice = variable.get()
     print("display_selected", choice)
@@ -30,7 +29,6 @@ variable.set("test")
 options_frame = ttk.Frame(master=app)
 
 optionmenu_1 = customtkinter.CTkOptionMenu(master=options_frame, variable=variable, values=countries, command=select_callback)
-
 optionmenu_2 = customtkinter.CTkOptionMenu(master=options_frame, variable=variable, values=countries, command=select_callback,
                                            dynamic_resizing=False)
 optionmenu_1.pack(side = 'left', pady=20, padx=10) 
@@ -76,7 +74,6 @@ button_open_directory = customtkinter.CTkButton(openfile_frame_sub1, text="Open 
 openfile_frame_sub2 = ttk.Frame(master=openfile_frame)
 
 button_save_as_file = customtkinter.CTkButton(openfile_frame_sub2, text="Save As File Dialog", command=save_as_file_dialog)
-
 button_save_as_file_name = customtkinter.CTkButton(openfile_frame_sub2, text="Save As File Name Dialog", command=save_as_file_name_dialog)
 
 button_open_file.pack( pady=10, padx=10)

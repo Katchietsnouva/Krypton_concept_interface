@@ -37,9 +37,31 @@ def open_file_name_dialog():
 def save_as_file_name_dialog():
     print(customtkinter.filedialog.asksaveasfilename())
 
+def exit_application():
+    app.quit()
+
 # Create widgets
-switch_1 = customtkinter.CTkSwitch(master=app, text="switch_1", command=widget_click)
+
+switch_group = ttk.Frame(master=app)
+switch_group1 = ttk.Frame(master=switch_group)
+switch_1 = customtkinter.CTkSwitch(master=switch_group1, text="switch_1", command=widget_click)
+switch_2 = customtkinter.CTkSwitch(master=switch_group1, text="switch_1", command=widget_click)
+
 switch_1.pack(padx=20, pady=(20, 10))
+switch_2.pack(padx=20, pady=(20, 10))
+switch_group1.pack('left')
+
+switch_group2 = ttk.Frame(master=switch_group)
+switch_3 = customtkinter.CTkSwitch(master=switch_group2, text="switch_1", command=widget_click)
+switch_4 = customtkinter.CTkSwitch(master=switch_group2, text="switch_1", command=widget_click)
+
+switch_3.pack(padx=20, pady=(20, 10))
+switch_4.pack(padx=20, pady=(20, 10))
+switch_group2.pack('left')
+switch_group.pack()
+
+button_exit = customtkinter.CTkButton(app, text="Exit", command=exit_application)
+button_exit.pack(pady=10)
 
 countries = ['Bahamas', 'Canada', 'Cuba', 'United States', "long sdhfhjgdshjafghdgshfhjdsfj"]
 variable = tkinter.StringVar()
@@ -81,11 +103,7 @@ openfile_frame_sub1.pack(side='left', pady=10, padx=10)
 openfile_frame_sub2.pack(side='left', pady=10, padx=10)
 openfile_frame.pack()
 
-def exit_application():
-    app.quit()
 
-button_exit = customtkinter.CTkButton(app, text="Exit", command=exit_application)
-button_exit.pack(pady=10)
 
 entry_3 = customtkinter.CTkEntry(app, placeholder_text="placeholder")
 entry_3.pack(pady=(40, 20))

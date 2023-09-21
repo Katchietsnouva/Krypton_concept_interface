@@ -109,11 +109,12 @@ option_and_scroll_view.pack()
 # COMBO BOX
 combobox_1 = customtkinter.CTkComboBox(app, variable=variable, values=countries, command=select_callback, width=300)
 combobox_1.pack(pady=10, padx=10)
+combobox_2 = customtkinter.CTkComboBox(app, variable=variable, values=countries, command=select_callback, width=300)
+combobox_2.pack(pady=10, padx=10)
 
-# SCAL
+# SLIDER
 scaling_slider = customtkinter.CTkSlider(app, command=set_new_scaling, from_=0, to=2)
 scaling_slider.pack(pady=10, padx=10)
-
 
 # OPEN FILE AND SAVE FILE, FOLDER BUTTONS
 openfile_frame = customtkinter.CTkFrame(master=app)

@@ -94,4 +94,25 @@ def exit_application():
 button_exit = customtkinter.CTkButton(app, text="Exit", command=exit_application)
 button_exit.pack(pady=10)
 
+entry_3 = customtkinter.CTkEntry(app, placeholder_text="placeholder")
+entry_3.pack(pady=(40, 20))
+entry_3.insert(0, "sdfjk")
+entry_3.delete(0, "end")
+
+entry_4 = customtkinter.CTkEntry(app, placeholder_text="password", show="*")
+entry_4.pack(pady=(20, 20))
+entry_4.insert(0, "sdfjk")
+entry_4.delete(0, 2)
+
+# create scrollable frame
+        self.scrollable_frame = customtkinter.CTkScrollableFrame(self, label_text="CTkScrollableFrame")
+        self.scrollable_frame.grid(row=1, column=2, padx=(20, 0), pady=(20, 0), sticky="nsew")
+        self.scrollable_frame.grid_columnconfigure(0, weight=1)
+        self.scrollable_frame_switches = []
+        for i in range(100):
+            switch = customtkinter.CTkSwitch(master=self.scrollable_frame, text=f"CTkSwitch {i}")
+            switch.grid(row=i, column=0, padx=10, pady=(0, 20))
+            self.scrollable_frame_switches.append(switch)
+
+
 app.mainloop()

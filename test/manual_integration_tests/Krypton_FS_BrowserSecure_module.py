@@ -3,7 +3,16 @@ from concurrent.futures import ThreadPoolExecutor
 from flask import Flask, render_template
 import os
 from pathlib import Path
+
+# Initialize Firebase with your service account key JSON file
 # import sys
+import firebase_admin
+from firebase_admin import credentials
+
+cred = credentials.Certificate("path/to/serviceAccountKey.json")
+firebase_admin.initialize_app(cred)
+
+
 
 
 # Create the Flask app using a function

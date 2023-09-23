@@ -1,0 +1,94 @@
+Current Code File Location: C:\Users\katchietsnouvaniccur\Documents\Python_Projects\Krypton_concept_interface\test\manual_integration_tests\Krypton_FS_BrowserSecure_module.py
+
+
+
+Documents folder:
+Path: C:\Users\katchietsnouvaniccur/Documents
+Directories (76):
+	Directory: --Generated--APK--EXE
+	Directory: 3D Internship
+	Directory: ==MsWord Saves
+	Directory: Adobe
+	Directory: Adobe Ps
+	Directory: adsadfasdfgadsgsasdagdsfgsagsdgsadgs
+	Directory: AI Pdfs
+	Directory: All My Custom App Presets
+	Directory: Anto
+	Directory: Arduino
+	Directory: Automation
+	Directory: Blender Projects
+	Directory: Brave Saves
+	Directory: C#Projects
+	Directory: Capcut Renders
+	Directory: Circuit Apps Projects
+	Directory: Cisco web
+	Directory: CNC
+	Directory: CorelDRAW Projects
+	Directory: Custom Office Templates
+	Directory: EEE
+	Directory: Factory IO
+	Directory: FeedbackHub
+	Directory: Firebase_Projects
+	Directory: Fl new space
+	Directory: Fl Professional Mode
+	Directory: FlutterProjects
+	Directory: From AllSparkNouva
+	Directory: GitHubProjects
+	Directory: GNUSim 8085
+	Directory: H Docs
+	Directory: Hacker
+	Directory: Image-Line
+	Directory: Inkspace
+	Directory: IOT_RACE
+	Directory: JKUAT Hackathon
+	Directory: Kicad
+	Directory: KingsoftData
+	Directory: LabVIEW Data
+	Directory: LennarDigital
+	Directory: Lyrics
+	Directory: Mac ios
+	Directory: Mbaire proteus projects
+	Directory: mqtt
+	Directory: Ms Office Activation
+	Directory: Msc
+	Directory: MsPresentation saves
+	Directory: MsWord_Saves_Reports
+	Directory: Multism
+	Directory: My InTouch Applications
+	Directory: My Music
+	Directory: My Pictures
+	Directory: My Videos
+	Directory: My_main_CV
+	Directory: Notepad
+	Directory: Nouva Projects
+	Directory: Nx_files
+	Directory: OneNote Notebooks
+	Directory: pdf
+	Directory: Proteus Projects
+	Directory: Public
+	Directory: Python_Projects
+	Directory: Recordings_of_Projects-Private-
+	Directory: Simulation
+	Directory: TIA_Siemens
+	Directory: Unity Projects
+	Directory: Unreal Projects
+	Directory: VirtualDJ
+	Directory: Visual Studio 2017
+	Directory: Visual Studio 2022
+	Directory: VS 2022 Projects
+	Directory: Vs Code Projects
+	Directory: Web3
+	Directory: WebGL builds
+	Directory: WindowsPowerShell
+	Directory: WPS Cloud Files
+Files (3):
+	File: desktop.ini
+	File: systemtransparency.ini
+	File: Web3 procedure.txt
+
+
+
+Downloads folder:
+	Path: D:/Downloads
+	Directories (0):
+	Files (0):

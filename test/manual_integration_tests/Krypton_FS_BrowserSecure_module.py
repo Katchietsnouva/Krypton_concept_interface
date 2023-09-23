@@ -13,7 +13,8 @@ from firebase_admin import storage
 cred = credentials.Certificate("test\manual_integration_tests\python-cred.json")
 firebase_admin.initialize_app(cred)
 
-
+cred = credentials.Certificate("path/to/serviceAccountKey.json")
+firebase_admin.initialize_app(cred, {'storageBucket': 'your-storage-bucket-name'})
 
 
 # Create the Flask app using a function

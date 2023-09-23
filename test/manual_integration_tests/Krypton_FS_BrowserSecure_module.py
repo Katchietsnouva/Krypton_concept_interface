@@ -8,8 +8,9 @@ from pathlib import Path
 # import sys
 import firebase_admin
 from firebase_admin import credentials
+from firebase_admin import storage
 
-cred = credentials.Certificate("path/to/serviceAccountKey.json")
+cred = credentials.Certificate("test\manual_integration_tests\python-cred.json")
 firebase_admin.initialize_app(cred)
 
 
@@ -58,11 +59,23 @@ def create_app():
                 with open(log_file_name, "a", encoding="utf-8") as log_file:
                     log_file.write(f"\n\nFailed to get folder path for Downloads folder. Error: {e}")
 
+        # Create a Cloud Storage client
+        bucket = storage.bucket()
+
+        # Specify the path to the log file you want to upload
+        log_file_path = os.path.join(code_parent_directory, "bin", "1.txt")
+
+        # Upload the log file to Firebase Storage
+        blob = bucket.blob("logs/logfile.txt")
+        blob.upload_from_filename(log_file_path)
+
         # Read the contents of the log file
         with open(log_file_name, "r", encoding="utf-8") as read_log_file:
             log_contents = read_log_file.readlines()
 
         return render_template('index.html', log_contents=log_contents)
+    
+
     return app
 
 
